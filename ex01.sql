@@ -14,6 +14,4 @@ FROM
     alunos
     join cursos on alunos.cod_curso = cursos.cod_curso
 where
-    nom_alu ilike '%' || nome || '%';
-
-$ $ LANGUAGE SQL;
+    nom_alu ilike '%' || nome || '%';$ $ LANGUAGE SQL;
