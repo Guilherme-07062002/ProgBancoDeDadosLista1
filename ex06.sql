@@ -1,12 +1,10 @@
-CREATE OR REPLACE FUNCTION copia_curso(curso_origem integer, curso_destino integer)
-RETURNS TABLE(codigos integer)
+CREATE OR REPLACE FUNCTION copia_curso(velho integer, novo integer)
+RETURNS void
 AS $$
-	
-    INSERT INTO curriculos (cod_curso, cod_disc, periodo)
-    SELECT curso_destino, cod_disc, periodo 
-    FROM curriculos 
-    WHERE cod_curso = curso_origem
 
-    RETURNING cod_disc;
-$$
-LANGUAGE SQL;
+	INSERT INTO curriculos
+	SELECT novo, cod_disc, periodo
+	FROM curriculos
+	WHERE cod_curso = velho;
+
+$$ LANGUAGE SQL;
