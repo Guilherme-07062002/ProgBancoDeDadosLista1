@@ -21,4 +21,5 @@ RETURNS void AS $$
 	DELETE FROM curriculos WHERE cod_curso = codigo; 
 	DELETE FROM professores WHERE cod_curso = codigo;
 	DELETE FROM cursos WHERE cod_curso = codigo;
+	
 $$ LANGUAGE SQL;

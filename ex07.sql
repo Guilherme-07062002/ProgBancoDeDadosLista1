@@ -1,5 +1,4 @@
-CREATE OR REPLACE FUNCTION migra_curso(antigo_curso integer,
-									  novo_curso integer)
+CREATE OR REPLACE FUNCTION migra_curso(antigo_curso integer, novo_curso integer)
 									  
 RETURNS VOID AS $$
 
